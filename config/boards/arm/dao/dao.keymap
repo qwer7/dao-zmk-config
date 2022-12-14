@@ -13,26 +13,32 @@
 #define RSE 2
 #define ADJ 3
 
-&lt { quick_tap_ms = <400>; };
-&mt { quick_tap_ms = <300>; };
+&lt { quick_tap_ms = <350>; };
+&mt { quick_tap_ms = <250>; };
 
 / {
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
-// -----------------------------------------------------------------------------------------
-// |  GUI |   ~  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  [   | GUI/] |
-//        | CTRL/TAB |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |CTRL/'|
-//        | LSHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | RALT |
-//                           | RSE | SPC | LWR |   | LWR | BKSP | RSE |
+// .--------------------------------------------------------------.       .-----------------------------------------------------------.
+// |   ESC        |    Q    |    W   |   E    |    R    |    T    |       |   Y   |    U    |    I    |    O    |     P    |    \     |
+// |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
+// |   CTRL/Tab   |    A    |    S   |   D    |    F    |    G    |       |   H   |    J    |    K    |    L    |     ;    |     '    |
+// |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
+// |   ALT        |    Z    |    X   |   C    |    V    |    B    |       |   N   |    M    |    ,    |    .    |     /    | ` | ALT  |
+// '---------------------------------+--------+---------+---------+       |-------+---------+---------+-------------------------------'
+//                                   |  #R /  | SHIFT _ |  #L ENT |       | #L ENT| SPACE   |GUI BKSP |
+//                                   '--------+---------+---------'       '-------+---------+---------'
                         bindings = <
-   &kp ESC &kp ESC &kp Q &kp W &kp E &kp R &kp T &kp Y         &kp U  &kp I     &kp O   &kp P    &kp LBKT &mt RWIN RBKT
-            &mt LCTRL TAB &kp A &kp S &kp D &kp F &kp G &kp H         &kp J  &kp K     &kp L   &kp SEMI &mt RCTRL SQT
-            &mt LALT GRAVE &kp Z &kp X &kp C &kp V &kp B &kp N         &kp M  &kp COMMA &kp DOT &kp FSLH &mt RALT BSLH
-                     &lt RSE FSLH &mt LSHIFT SPACE &lt LWR RET    &lt LWR RET &kp SPACE &mt RGUI BSPC
+&trans    &kp ESC    &kp Q    &kp W    &kp E    &kp R     &kp T             &kp Y    &kp U     &kp I     &kp O      &kp P    &kp LBKT   &trans
+     &mt LCTRL TAB   &kp A    &kp S    &kp D    &kp F     &kp G             &kp H    &kp J     &kp K     &kp L      &kp SEMI &mt RCTRL SQT
+    &mt LALT GRAVE   &kp Z    &kp X    &kp C    &kp V     &kp B             &kp N    &kp M     &kp COMMA &kp DOT    &kp FSLH &mt RALT BSLH
+                     &lt RSE FSLH   &mt LSHIFT SPACE    &lt LWR RET      &lt LWR RET    &kp SPACE    &mt RGUI BSPC
                         >;
                 };
+                
+                
                 lower_layer {
 // -----------------------------------------------------------------------------------------
 // |     |  _  |  F1 |  F2 |  F3 |  F4 |  F5 |   |  F6 |  F7 |  F8 |  F9 | F10 | F11 | F12 |
