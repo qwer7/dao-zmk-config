@@ -54,11 +54,7 @@
                 };
 
                 raise_layer {
-// -----------------------------------------------------------------------------------------
-// |     | NMLK |  /  |  7  |  8  |  9  |  -  |   | VOLU| HOME| PRSC| PGUP| SCLK| CLCK|     |
-//       | CTRL |  *  |  4  |  5  |  6  |  +  |   | MUT | LEFT|  UP | RGHT| INS | APP |
-//       |      |  0  |  1  |  2  |  3  |  .  |   | VOLD| END | DOWN| PGDN| PAUS|     |
-//                          |     |     | ADJ |   | ADJ |     |     |
+
 // .--------------------------------------------------------------.       .----------------------------------------------------------------.
 // |              |         |        |        |         |         |       |  VOLU  |   HOME   |    UP    |   PGUP   |   PAUS    |          |
 // |--------------+---------+--------+--------+---------+---------|       |--------+----------+----------+----------+-----------+----------|
@@ -69,7 +65,7 @@
 //                          |            |            |  #A RET   |       |  #A RET    |            |           |
 //                          '------------+------------+-----------'       '------------+------------+-----------'
                         bindings = <
-&none   &trans      &trans    &trans   &trans   &trans    &trans        &kp C_VOL_UP &kp HOME  &kp UP     &kp PG_UP &kp PAUSE_BREAK &trans &transl
+&none   &trans      &trans    &trans   &trans   &trans    &trans        &kp C_VOL_UP &kp HOME  &kp UP     &kp PG_UP &kp PAUSE_BREAK &trans &none
         &trans      &trans    &trans   &trans   &trans    &trans        &kp C_MUTE   &kp LEFT  &kp DOWN   &kp RIGHT &kp INS         &trans
         &trans      &trans    &trans   &trans   &trans    &trans        &kp C_VOL_DN &kp END   &kp PSCRN  &kp PG_DN &kp SLCK        &trans
                               &trans      &trans      &lt ADJ RET       &lt ADJ RET   &trans   &trans
@@ -82,9 +78,9 @@
 // |              |   BT0   |   BT1  |  BT2   |         |         |       |   *   |    4    |    5    |    6    |    +     |          |
 // |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
 // |              |         |        |        |         |         |       |   0   |    1    |    2    |    3    |    .     |    =     |
-// '---------------------------------+--------+---------+---------+       |-------+---------+---------+-------------------------------'
-//                                   |        |         |         |       |       |         |         |
-//                                   '--------+---------+---------'       '-------+---------+---------'
+// '------------------------+-------------------------------------+       |-----------------------------------------------------------'
+//                          |            |            |  #A RET   |       |  #A RET    |            |           |
+//                          '------------+------------+-----------'       '------------+------------+-----------'
                         bindings = <
 &none &bt BT_CLR    &none      &none    &none     &none     &none         &kp KP_SLASH    &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS &kp BSPC  &none 
       &none      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none &none       &kp KP_MULTIPLY &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS  &none
