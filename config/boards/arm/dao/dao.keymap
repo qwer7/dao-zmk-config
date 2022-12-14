@@ -60,7 +60,7 @@
                 raise_layer {
 
 // .--------------------------------------------------------------.       .----------------------------------------------------------------.
-// |              |   ⌘Q    |        |        |   ⌘R    |         |       |  VOL+  |   HOME   |    UP    |   PGUP   |   PAUS    |    ]}    |
+// |              |   ⌘Q    |        |        |   ⌘R    |   ⌃⇧1   |       |  VOL+  |   HOME   |    UP    |   PGUP   |   PAUS    |    ]}    |
 // |--------------+---------+--------+--------+---------+---------|       |--------+----------+----------+----------+-----------+----------|
 // |              |         |   ⌘S   |   ⌘D   |   ⌘F    |   ⌘_    |       |  MUT   |   LEFT   |   DOWN   |   RGHT   |   INS     |          |
 // |--------------+---------+--------+--------+---------+---------|       |--------+----------+----------+----------+-----------+----------|
@@ -69,7 +69,7 @@
 //                          |            |            |  #A RET   |       |  LOCK #A   |            |           |
 //                          '------------+------------+-----------'       '------------+------------+-----------'
                         bindings = <
-&none   &trans    &kp LG(Q) &none     &none     &kp LG(R)    &none         &kp C_VOL_UP &kp HOME  &kp UP     &kp PG_UP &kp PAUSE_BREAK &kp RBKT &none
+&none   &trans    &kp LG(Q) &none     &none     &kp LG(R) &kp LS(LC(N1))         &kp C_VOL_UP &kp HOME  &kp UP     &kp PG_UP &kp PAUSE_BREAK &kp RBKT &none
         &trans    &none     &kp LG(S) &kp LG(D) &kp LG(F) &kp LG(SPACE)    &kp C_MUTE   &kp LEFT  &kp DOWN   &kp RIGHT &kp INS         &trans
         &trans    &kp LG(Z) &kp LG(X) &kp LG(C) &kp LG(V) &kp LG(LA(V))    &kp C_VOL_DN &kp END   &kp PSCRN  &kp PG_DN &kp SLCK        &trans
                               &trans      &trans       &lt ADJ RET         &tog ADJ      &trans   &trans
