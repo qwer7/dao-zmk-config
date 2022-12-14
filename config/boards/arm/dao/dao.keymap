@@ -68,7 +68,7 @@
                 };
                 adjust_layer {
 // .--------------------------------------------------------------.       .-----------------------------------------------------------.
-// |   BTCLR      |         |        |        |         |         |       |   /   |    7    |    8    |    9    |    -     |          |
+// |   BTCLR      |         |        |        |         |         |       |   /   |    7    |    8    |    9    |    -     |   BKSP   |
 // |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
 // |              |   BT0   |   BT1  |  BT2   |         |         |       |   *   |    4    |    5    |    6    |    +     |          |
 // |--------------+---------+--------+--------+---------+---------|       |-------+---------+---------+---------+----------+----------|
@@ -77,7 +77,7 @@
 //                                   |        |         |         |       |       |         |         |
 //                                   '--------+---------+---------'       '-------+---------+---------'
                         bindings = <
-&none &bt BT_CLR    &none      &none    &none     &none     &none         &kp KP_SLASH    &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS &none  &none 
+&none &bt BT_CLR    &none      &none    &none     &none     &none         &kp KP_SLASH    &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS &kp BSPC  &none 
       &none      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none &none       &kp KP_MULTIPLY &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS  &none
       &none         &none       &none   &none     &none     &none         &kp KP_N0       &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_DOT   &kp EQUAL
                                        &trans    &none     &trans           &trans &none &trans
